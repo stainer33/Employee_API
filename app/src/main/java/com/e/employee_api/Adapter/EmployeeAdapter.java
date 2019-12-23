@@ -38,8 +38,8 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.ViewHo
         //attaching data one by one
         Employee employee = employees.get(position);
         holder.name.setText(employee.getEmployee_name());
-        holder.age.setText(employee.getEmployee_age());
-       holder.salary.setText((int) employee.getEmployee_salary());
+        holder.age.setText(Integer.toString(employee.getEmployee_age()));
+       holder.salary.setText(Float.toString(employee.getEmployee_salary()));
     }
 
     @Override
