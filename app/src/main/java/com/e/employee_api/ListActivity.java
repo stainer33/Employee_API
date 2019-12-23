@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.e.employee_api.API.EmployeeAPI;
+import com.e.employee_api.Adapter.EmployeeAdapter;
 import com.e.employee_api.Models.Employee;
 import com.e.employee_api.URL.URL;
 
@@ -47,18 +47,13 @@ RecyclerView recyclerView;
                 }
                 List<Employee>employeeList=response.body();
 
-                /*for(Employee employee:employeeList){
-                    String data="";
-                    data +="Name is: "+employee.getEmployee_name()+"\n";
-                    data +="Salary is: "+employee.getEmployee_salary()+"\n";
-                    data +="---------------"+"\n";
-                    tvOutput.append(data);
 
-                }*/
 
-                EmployeeAdapter employeeAdapter =new EmployeeAdapter(ListActivity.this,employeeList);
-                recyclerView.setAdapter(employeeAdapter);
-                recyclerView.setLayoutManager(new LinearLayoutManager(ListActivity.this));
+                        EmployeeAdapter employeeAdapter = new EmployeeAdapter(ListActivity.this, employeeList);
+                        recyclerView.setAdapter(employeeAdapter);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(ListActivity.this));
+
+
 
             }
 

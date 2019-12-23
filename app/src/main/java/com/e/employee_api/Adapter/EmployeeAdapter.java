@@ -1,4 +1,4 @@
-package com.e.employee_api;
+package com.e.employee_api.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.e.employee_api.Models.Employee;
+import com.e.employee_api.R;
 
-import java.net.ContentHandler;
 import java.util.List;
 
 public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.ViewHolder>{
@@ -39,7 +39,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.ViewHo
         Employee employee = employees.get(position);
         holder.name.setText(employee.getEmployee_name());
         holder.age.setText(employee.getEmployee_age());
-        holder.salary.setText((int) employee.getEmployee_salary());
+       holder.salary.setText((int) employee.getEmployee_salary());
     }
 
     @Override
